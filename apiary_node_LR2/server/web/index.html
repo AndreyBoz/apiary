@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мониторинг пасеки</title>
+<style>
+body { font: 16px system-ui, sans-serif; max-width: 1050px; margin: 32px auto; padding: 0 16px; color: #182b29; }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid #dde5e3; }
+th { background: #edf4f2; }
+.scroll { overflow-x: auto; }
+tr.swarm { background: #fee1db; }
+tr.stale { background: #eee; color: #646464; }
+canvas { width: 100%; height: auto; }
+</style>
+<h1>Мониторинг пасеки</h1>
+<p id="connection" role="status">Подключение к брокеру…</p>
+<ul id="gateways"></ul>
+<div class="scroll"><table>
+<thead><tr><th>Пасека / улей</th><th>Узел</th><th>Масса, кг</th><th>RMS</th><th>Доля 100–200 Гц</th><th>Роение</th><th>Заряд</th><th>Обновлено</th></tr></thead>
+<tbody id="hives"></tbody>
+</table></div>
+<h2>Масса за последние 10 минут</h2>
+<label>Улей <select id="hive"><option value="">Нет данных</option></select></label>
+<canvas id="history" width="900" height="270" aria-label="График массы"></canvas>
+<script defer src="mqtt.min.js"></script>
+<script defer src="dashboard.js"></script>
+</html>

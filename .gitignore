@@ -1,0 +1,36 @@
+# ESP-IDF: сборочные каталоги и сгенерированные файлы
+build/
+build_*/
+**/build/
+**/build_*/
+managed_components/
+dependencies.lock
+compile_commands.json
+
+# sdkconfig генерируется из sdkconfig.defaults
+sdkconfig
+sdkconfig.old
+**/sdkconfig
+**/sdkconfig.old
+
+# Локальные настройки VS Code (пути и COM-порт у каждого свои)
+.vscode/settings.json
+**/.vscode/settings.json
+.vscode/c_cpp_properties.json
+**/.vscode/c_cpp_properties.json
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# Node.js (Docker-дашборд собирается внутри контейнера)
+node_modules/
+npm-debug.log*
